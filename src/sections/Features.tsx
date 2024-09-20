@@ -5,7 +5,6 @@ import ShieldCheck from '../assets/icons/check.png'
 import Coins       from '../assets/icons/coins.png'
 import Frames      from '../assets/frames.png'
 import { Fade }    from "react-awesome-reveal";
-import App         from "../App";
 
 const Features = () => {
   return (

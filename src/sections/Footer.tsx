@@ -10,9 +10,9 @@ import { Fade } from 'react-awesome-reveal'
 
 const Footer = () => {
   return (
-    <section class={`bg-gray-800`}>
-      <div class={`flex max-w-7xl flex-col px-8 py-12 text-gray-300 lg:px-12 xl:m-auto`}>
-        <div class={`flex flex-col justify-between gap-12 md:flex-row md:gap-0`}>
+    <footer className={`footer bg-gray-800`}>
+      <div className={`flex max-w-7xl flex-col px-8 py-12 text-gray-300 lg:px-12 xl:m-auto`}>
+        <div className={`flex flex-col justify-between gap-12 md:flex-row md:gap-0`}>
           <Fade
             cascade
             direction={`left`}
@@ -29,7 +29,7 @@ const Footer = () => {
               <p>Start spending the smart way</p>
             </div>
           </Fade>
-          <div class={`flex gap-10`}>
+          <div className={`flex gap-10`}>
             <Fade
               cascade
               direction={`up`}
@@ -121,7 +121,7 @@ const Footer = () => {
           </Fade>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
