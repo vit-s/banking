@@ -81,6 +81,40 @@ const Partners = () => {
           />
         </Fade>
       </div>
+      <div className={`xl:flex xl:justify-center`}>
+        <Fade
+          cascade
+          direction={'left'}
+          delay={400}
+          damping={1e-1}
+          triggerOnce={true}
+        >
+          <LogoWall
+            src1={Airtel}
+            src2={Payoneer}
+            src3={Visa}
+            alt1={`Airtel logo`}
+            alt2={`Payoneer logo`}
+            alt3={`Visa logo`}
+          />
+        </Fade>
+        <Fade
+          cascade
+          direction={'right'}
+          delay={600}
+          damping={1e-1}
+          triggerOnce={true}
+        >
+          <LogoWall
+            src1={Mobile}
+            src2={Ikeja}
+            src3={Dstv}
+            alt1={`Mobile logo`}
+            alt2={`Ikeja logo`}
+            alt3={`Dstv logo`}
+          />
+        </Fade>
+      </div>
     </section>
   );
 };
