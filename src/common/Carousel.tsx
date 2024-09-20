@@ -16,7 +16,8 @@ interface Slide {
 
 const Carousel = ({slides}: CarouselProps) => {
   let [current, setCurrent] = useState(0)
-  const previousSlide       = () => {
+
+  function previousSlide() {
     if (current === 0) {
       setCurrent(slides.length - 1)
     } else {
@@ -24,7 +25,7 @@ const Carousel = ({slides}: CarouselProps) => {
     }
   }
 
-  const nextSlide = () => {
+  function nextSlide() {
     if (current === slides.length - 1) {
       setCurrent(0)
     } else {
@@ -42,7 +43,7 @@ const Carousel = ({slides}: CarouselProps) => {
           slides.map((slide, index) => (
             <div
               key={index}
-              className={`relative h-full min-h-fit w-full flex-shrink-0`}
+              className={`relative h-full min-h-fit w-full flex-shrink-0 text-white`}
             >
               <img
                 className={`min-h-[400px] object-cover`}
@@ -55,16 +56,52 @@ const Carousel = ({slides}: CarouselProps) => {
                   <h1 className={`text-xl font-semibold`}>{slide.name}</h1>
                   <div className={`hidden lg:flex`}>
                     <img
-                      src=""
-                      alt=""
+                      src={Star}
+                      alt="star-icon"
+                      className={`h-5 w-5`}
+                    />
+                    <img
+                      src={Star}
+                      alt="star-icon"
+                      className={`h-5 w-5`}
+                    />
+                    <img
+                      src={Star}
+                      alt="star-icon"
+                      className={`h-5 w-5`}
+                    />
+                    <img
+                      src={Star}
+                      alt="star-icon"
+                      className={`h-5 w-5`}
+                    />
+                    <img
+                      src={Star}
+                      alt="star-icon"
+                      className={`h-5 w-5`}
                     />
                   </div>
                 </div>
+                <h2>
+                  {slide.country}
+                </h2>
               </div>
             </div>
           ))
         }
       </div>
+      <img
+        src={ArrowBack}
+        alt="arrow-back-button"
+        className={'absolute bottom-5 right-16 h-7 w-7 rounded-full border p-1 hover:cursor-pointer'}
+        onClick={previousSlide}
+      />
+      <img
+        src={ArrowForward}
+        alt="arrow-next-button"
+        className={'absolute bottom-5 right-5 h-7 w-7 rounded-full border p-1 hover:cursor-pointer'}
+        onClick={nextSlide}
+      />
     </div>
   );
 };
