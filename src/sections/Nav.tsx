@@ -10,7 +10,7 @@ const Nav = () => {
   const textLinkClasses = 'text-gray-500 hover:text-gray-900 active:text-gray-400'
 
   const navLinks = [
-    {href: '#featires', children: 'Features'},
+    {href: '#features', children: 'Features'},
     {href: '#partners', children: 'Partners'},
     {href: '#reviews', children: 'Reviews'},
   ]

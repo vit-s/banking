@@ -50,7 +50,7 @@ const StoreLinks = ({type}: StoreLinksProps) => {
           href={'https://play.google.com'}
           upperText={'Get it on'}
           lowerText={'Google Play'}
-          logo={GooglePlay}
+          logo={GooglePlayBright}
           target={'_blank'}
           className={`my-4 flex gap-3 rounded-lg border bg-transparent px-2 py-1 text-white hover:bg-zinc-950 active:bg-zinc-800`}
         />

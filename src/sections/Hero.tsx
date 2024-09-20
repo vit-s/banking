@@ -40,7 +40,7 @@ const Hero = () => {
           <StoreLinks type={BtnTypes.Standard}/>
         </Fade>
       </div>
-      <div>
+      <div className={`md:w-3/6 xl:mb-12 xl:overflow-hidden`}>
         <Fade
           cascade
           direction={`right`}
@@ -49,8 +49,9 @@ const Hero = () => {
           triggerOnce={true}
         >
           <img
-            src=""
-            alt=""
+            src={Phone}
+            alt='app frame'
+            className={`right-0 m-auto xl:left-6 xl:right-0 xl:mt-8 xl:w-11/12`}
           />
         </Fade>
       </div>
