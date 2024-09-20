@@ -26,7 +26,7 @@ const Nav = () => {
         {
           ({open}) => (
             <>
-              <div className={`flex h-[15vh] max-w-7xl items-center justify-between px-8 lg:px-12 xl:m-auto`}>
+              <div className={`flex h-[10vh] max-w-7xl items-center justify-between px-10 lg:px-12 xl:m-auto z-100`}>
                 <div className={`flex`}>
                   <ButtonLink
                     href={`#`}
@@ -56,7 +56,7 @@ const Nav = () => {
                   children={'Contact'}
                   className={`active:bg hidden rounded-full bg-gray-800 px-5 py-3 text-white hover:bg-gray-900 active:bg-gray-600 sm:flex`}
                 />
-                <Disclosure.Button className={`rounded-md p-2 text-gray-500 hover:bg-gray-900 hover:text-white sm:hidden`}>
+                <Disclosure.Button className={`rounded-md p-2 text-gray-500 hover:bg-gray-900 hover:text-white sm:hidden z-10`}>
                   {
                     open ? (
                       <XMarkIcon className={`block h-6 w-6 `}/>
@@ -66,19 +66,47 @@ const Nav = () => {
                   }
                 </Disclosure.Button>
               </div>
-              <Disclosure.Panel className={`space-y-1 bg-gray-100 px-4 pb-3 sm:hidden`}>
-                {
-                  navLinks.map((link, index) => (
-                    <Disclosure.Button
-                      className={`block`}
-                      as={`a`}
-                      href={`#features`}
-                      key={index}
-                    >
-                      {link.children}
+              <Disclosure.Panel className={"w-full bg-gray-100 fixed top-0 z-[100] h-fit shadow-xl"}>
+                <div className={`flex flex-col justify-center mb-5`}>
+                  <div className={`flex h-[10vh] items-center justify-between px-10 lg:px-12 xl:m-auto z-100`}>
+                    <ButtonLink
+                      href="#"
+                      children={
+                        <img
+                          src={Paydrop}
+                          alt={`logo`}
+                        />
+                      }
+                    />
+                    <Disclosure.Button className={`rounded-md p-2 text-gray-500 hover:bg-gray-900 hover:text-white sm:hidden z-10`}>
+                      {
+                        open ? (
+                          <XMarkIcon className={`block h-6 w-6 `}/>
+                        ) : (
+                          <Bars3Icon className={`block h-6 w-6`}/>
+                        )
+                      }
                     </Disclosure.Button>
-                  ))
-                }
+                  </div>
+                  {
+                    navLinks.map((link, index) => (
+                      <Disclosure.Button
+                        className={`text-black hover:bg-gray-300 rounded-md text-base font-medium px-5 py-4 mx-5`}
+                        as={`a`}
+                        href={link.href}
+                        key={index}
+                      >
+                        {link.children}
+                      </Disclosure.Button>
+                    ))
+                  }
+                  <ButtonLink
+                    href={'#'}
+                    target={`_blank`}
+                    children={'Contact'}
+                    className={`bg-gray-800 text-white hover:bg-gray-300 rounded-md text-base font-medium px-5 py-4 mx-5`}
+                  />
+                </div>
               </Disclosure.Panel>
             </>
           )

@@ -5,7 +5,7 @@ import { Fade }                 from "react-awesome-reveal";
 
 const Hero = () => {
   return (
-    <section className={`relative mt-4 flex h-fit max-w-7xl flex-col items-center gap-10 px-8 sm:gap-16 md:my-0 md:h-[84.9vh] md:flex-row md:gap-0 lg:px-12 xl:m-auto xl:gap-0 xl:overflow-hidden`}>
+    <section className={`relative -z-10 mt-4 flex h-fit max-w-7xl flex-col items-center gap-10 px-8 sm:gap-16 md:my-0 md:h-[84.9vh] md:flex-row md:gap-0 lg:px-12 xl:m-auto xl:gap-0 xl:overflow-hidden`}>
       <div className={`sm:w-full md:w-3/6`}>
         <Fade
           cascade

@@ -9,7 +9,7 @@ export interface LogoWallProps {
 
 const LogoWall = ({src1, src2, src3, alt1, alt2, alt3}: LogoWallProps) => {
   return (
-    <div class={`flex flex-cols-3 justify-center items-center`}>
+    <div className={`flex flex-cols-3 justify-center items-center`}>
       <div className={`w-fit rounded-full max-w-[150px] m-2`}>
         <img
           src={src1}
